@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Nossa História ❤️</title>
+
+<style>
+
+body{
+font-family: Arial;
+background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+text-align:center;
+color:white;
+padding:40px;
+}
+
+h1{
+font-size:50px;
+}
+
+#contador{
+font-size:28px;
+margin-top:20px;
+}
+
+.galeria img{
+width:250px;
+border-radius:15px;
+margin:10px;
+}
+
+.botao{
+background:white;
+color:#ff4d6d;
+padding:15px 30px;
+border:none;
+border-radius:30px;
+font-size:20px;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Eu te amo ❤️</h1>
+
+<p>
+Esse site é só para lembrar o quanto você é importante para mim.
+</p>
+
+<h2>Estamos juntos há:</h2>
+
+<div id="contador"></div>
+
+<h2>Nossas fotos</h2>
+
+<div class="galeria">
+
+<img src="foto1.jpg">
+<img src="foto2.jpg">
+<img src="foto3.jpg">
+
+</div>
+
+<br><br>
+
+<button class="botao" onclick="surpresa()">
+Clique para uma surpresa
+</button>
+
+<script>
+
+var dataInicio = new Date("2025-03-28")
+
+function atualizar(){
+
+var agora = new Date()
+
+var diferenca = agora - dataInicio
+
+var dias = Math.floor(diferenca / (1000*60*60*24))
+var horas = Math.floor((diferenca / (1000*60*60)) % 24)
+var minutos = Math.floor((diferenca / (1000*60)) % 60)
+var segundos = Math.floor((diferenca / 1000) % 60)
+
+document.getElementById("contador").innerHTML =
+dias + " dias " +
+horas + " horas " +
+minutos + " minutos " +
+segundos + " segundos"
+
+}
+
+setInterval(atualizar,1000)
+
+function surpresa(){
+
+alert("Eu te amo mais do que tudo ❤️")
+
+}
+
+</script>
+
+</body>
+</html>
